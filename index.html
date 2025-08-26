@@ -4,9 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>PPW</title>
-
-  <!-- Panggil CSS eksternal -->
-  <link rel="stylesheet" href="style.css?v=1.0">
+  <!-- Hubungkan ke CSS -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <div class="app">
@@ -25,124 +24,54 @@
 
     <div id="overlay" class="overlay" onclick="toggleSidebar(false)"></div>
 
-    <!-- Main Content -->
+    <!-- Main -->
     <main class="main">
-      <!-- Topbar -->
       <div class="topbar">
         <button class="menu-btn" onclick="toggleSidebar(true)" aria-label="Buka menu">
-          <!-- Hamburger -->
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-               stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="3" y1="6" x2="21" y2="6"/>
-            <line x1="3" y1="12" x2="21" y2="12"/>
-            <line x1="3" y1="18" x2="21" y2="18"/>
-          </svg>
+          <!-- hamburger -->
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
         </button>
-
-        <div class="actions" aria-label="Aksi cepat">
-          <a title="Info" href="#">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
-                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10"/>
-              <line x1="12" y1="16" x2="12" y2="12"/>
-              <line x1="12" y1="8" x2="12" y2="8"/>
-            </svg>
-          </a>
-
-          <a title="GitHub" href="https://github.com/Naren56/ppw" target="_blank" rel="noopener">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 .5a12 12 0 0 0-3.79 23.4c.6.11.82-.26.82-.58v-2.24
-                       c-3.34.73-4.04-1.61-4.04-1.61-.55-1.4-1.34-1.77-1.34-1.77
-                       -1.09-.74.08-.73.08-.73 1.2.09 1.83 1.24 1.83 1.24
-                       1.07 1.83 2.82 1.3 3.5.99.11-.78.42-1.3.76-1.6
-                       -2.67-.3-5.47-1.34-5.47-5.96 0-1.32.47-2.39
-                       1.24-3.24-.13-.3-.54-1.51.12-3.15 0 0 1.01-.32
-                       3.3 1.23a11.5 11.5 0 0 1 6.01 0c2.29-1.55
-                       3.3-1.23 3.3-1.23.66 1.64.25 2.85.12 3.15.77.85
-                       1.24 1.92 1.24 3.24 0 4.63-2.8 5.66-5.48
-                       5.96.43.37.82 1.1.82 2.22v3.29c0 .32.21.7.83.58
-                       A12 12 0 0 0 12 .5Z"/>
-            </svg>
-          </a>
-
-          <a title="Unduh" href="#" onclick="downloadHTML();return false;">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
-                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-              <polyline points="7 10 12 15 17 10"/>
-              <line x1="12" y1="15" x2="12" y2="3"/>
-            </svg>
-          </a>
-        </div>
       </div>
 
       <!-- Profile Section -->
-      <section id="profile" class="card">
-        <h2 class="title">Profile</h2>
-        <div class="kartu">
-          Narendra Wardianto • 220411100078 • 220411100078@student.trunojoyo.ac.id
-        </div>
-        <p class="muted">
-          Halo, nama saya <strong>Narendra Wardianto</strong>. Saya berasal dari Surabaya dan saat ini sedang menempuh perkuliahan di <em>Universitas Trunojoyo Madura</em>, Fakultas Teknik, Program Studi Teknik Informatika.
-        </p>
+      <section id="profile" class="card" aria-labelledby="h-profile">
+        <h2 id="h-profile" class="title">Profile</h2>
+        <div class="kartu">Narendra Wardianto • 220411100078 • 220411100078@student.trunojoyo.ac.id</div>
+        <p class="muted">Halo, nama saya <strong>Narendra Wardianto</strong>. Saya berasal dari Surabaya dan saat ini sedang menempuh perkuliahan di <em>Universitas Trunojoyo Madura</em>, Fakultas Teknik, Program Studi Teknik Informatika.</p>
         <p>
-          Saya memiliki minat di bidang teknologi informasi, khususnya pada pengembangan web dan analisis data. Saat ini saya sedang belajar lebih dalam mengenai Web Mining dan pemanfaatannya untuk berbagai kebutuhan, mulai dari analisis sentimen hingga pengolahan data skala besar.
-        </p>
-        <p>
-          Tujuan saya mengikuti mata kuliah ini adalah untuk memahami konsep dasar, teknik, serta penerapan Web Mining dalam dunia nyata, sehingga ke depannya saya dapat mengimplementasikan ilmu yang saya pelajari untuk penelitian maupun pengembangan sistem.
+          Saya memiliki minat di bidang teknologi informasi, khususnya pada pengembangan web dan analisis data. 
+          Saat ini saya sedang belajar lebih dalam mengenai Web Mining dan pemanfaatannya untuk berbagai kebutuhan, mulai dari analisis sentimen hingga pengolahan data skala besar.
         </p>
       </section>
 
       <div class="spacer"></div>
 
       <!-- Pengantar Web Mining -->
-      <section id="pengantar" class="card">
-        <h2 class="title">Pengantar Web Mining</h2>
-        <p>Materi ringkas untuk halaman tugas:</p>
+      <section id="pengantar" class="card" aria-labelledby="h-pengantar">
+        <h2 id="h-pengantar" class="title">Pengantar Web Mining</h2>
         <ul>
           <li>Definisi Web Mining & ruang lingkup: Content, Usage, dan Structure Mining.</li>
-          <li>Tantangan: skala data, dinamika web, dan heterogenitas format (HTML, XML, teks).</li>
-          <li>Alur umum: Pengumpulan data → <em>Preprocessing</em> → Pembobotan/Representasi → Pemodelan → Evaluasi.</li>
-          <li>Contoh teknik: Naive Bayes & SVM (klasifikasi), K-Means (clustering), PageRank (structure), analisis clickstream (usage).</li>
-          <li>Contoh aplikasi: rekomendasi produk, analisis sentimen ulasan, deteksi komunitas, personalisasi pencarian.</li>
+          <li>Tantangan: skala data, dinamika web, dan heterogenitas format.</li>
+          <li>Alur umum: Pengumpulan data → Preprocessing → Representasi → Pemodelan → Evaluasi.</li>
+          <li>Contoh teknik: Naive Bayes, SVM, K-Means, PageRank, analisis clickstream.</li>
+          <li>Contoh aplikasi: rekomendasi produk, analisis sentimen, personalisasi pencarian.</li>
         </ul>
-        <p class="muted">Silakan sesuaikan isi sesuai instruksi dosen dan referensi materi kuliah.</p>
       </section>
 
-      <footer>Dibuat untuk tugas PPW.</footer>
+      <footer>
+        Dibuat untuk tugas PPW.
+      </footer>
     </main>
   </div>
 
-  <!-- Javascript -->
   <script>
     const sidebar = document.getElementById('sidebar');
     const overlay = document.getElementById('overlay');
-
     function toggleSidebar(open) {
-      if (open) {
-        sidebar.classList.add('open');
-        overlay.classList.add('show');
-      } else {
-        sidebar.classList.remove('open');
-        overlay.classList.remove('show');
-      }
+      if (open === true) { sidebar.classList.add('open'); overlay.classList.add('show'); }
+      else { sidebar.classList.remove('open'); overlay.classList.remove('show'); }
     }
-
-    // Tutup sidebar saat klik link (mobile)
-    document.querySelectorAll('.sidebar a').forEach(a =>
-      a.addEventListener('click', () => toggleSidebar(false))
-    );
-
-    // Download halaman sebagai index.html
-    function downloadHTML() {
-      const blob = new Blob([document.documentElement.outerHTML], { type: 'text/html' });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = 'index.html';
-      a.click();
-      URL.revokeObjectURL(url);
-    }
+    document.querySelectorAll('.sidebar a').forEach(a => a.addEventListener('click', () => toggleSidebar(false)));
   </script>
 </body>
 </html>
