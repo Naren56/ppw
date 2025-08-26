@@ -1,40 +1,40 @@
-/* Reset */
+/* Reset dasar */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Layout wrapper */
+body {
+  display: flex;
+  height: 100vh;
+  background: #f4f6f9;
+  color: #333;
+}
+
+/* Wrapper */
 .wrapper {
   display: flex;
-  min-height: 100vh;
-  background: #f5f7fb;
+  width: 100%;
 }
 
 /* Sidebar */
 .sidebar {
   width: 250px;
-  background: linear-gradient(180deg, #0d47a1, #1976d2);
-  border-right: none;
-  padding: 20px;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
+  background: linear-gradient(180deg, #1a1a2e, #16213e);
   color: #fff;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  box-shadow: 2px 0 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
 }
 
 .sidebar h2 {
-  margin-bottom: 30px;
-  font-size: 22px;
-  font-weight: bold;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
   text-align: center;
+  font-weight: 600;
   letter-spacing: 1px;
 }
 
@@ -46,103 +46,47 @@
   margin: 15px 0;
 }
 
-.sidebar nav ul li a {
+.sidebar nav a {
   text-decoration: none;
-  color: #e0e0e0;
+  color: #ddd;
   padding: 10px 15px;
-  display: block;
+  display: flex;
+  align-items: center;
   border-radius: 10px;
   transition: all 0.3s ease;
-  font-weight: 500;
+  font-size: 1rem;
 }
 
-.sidebar nav ul li a:hover,
-.sidebar nav ul li a.active {
-  background: #ffffff;
-  color: #0d47a1;
-  font-weight: bold;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+.sidebar nav a i {
+  margin-right: 10px;
+}
+
+.sidebar nav a:hover {
+  background: #0f3460;
+  color: #fff;
+  transform: translateX(5px);
+}
+
+.sidebar nav a.active {
+  background: #e94560;
+  color: #fff;
+  font-weight: 600;
 }
 
 .sidebar footer {
-  font-size: 14px;
-  color: #ddd;
   text-align: center;
+  font-size: 0.85rem;
+  margin-top: 20px;
+  opacity: 0.8;
 }
 
 /* Main Content */
 .main-content {
-  margin-left: 250px;
-  padding: 50px;
   flex: 1;
-  background: linear-gradient(to right, #f9f9f9, #ffffff);
-  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.05);
+  padding: 40px;
+  overflow-y: auto;
 }
 
-.main-content h1 {
-  font-size: 32px;
-  margin-bottom: 20px;
-  color: #0d47a1;
-  border-bottom: 3px solid #1976d2;
-  padding-bottom: 10px;
-}
-
-.main-content h2 {
-  margin: 15px 0;
-  color: #333;
-}
-
-.main-content p {
-  line-height: 1.7;
-  font-size: 16px;
-  color: #444;
-}
-
-/* Profile Image */
-.profile-img {
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
-  margin-bottom: 20px;
-  object-fit: cover;
-  border: 4px solid #1976d2;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease;
-}
-.profile-img:hover {
-  transform: scale(1.05);
-}
-
-/* Responsif */
-@media (max-width: 768px) {
-  .wrapper {
-    flex-direction: column;
-  }
-
-  .sidebar {
-    position: relative;
-    width: 100%;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .sidebar nav ul {
-    display: flex;
-    gap: 10px;
-  }
-
-  .sidebar footer {
-    display: none;
-  }
-
-  .main-content {
-    margin-left: 0;
-    padding: 20px;
-  }
-}
-
-/* Tambahan style untuk hide/show */
 .content-section {
   display: none;
   animation: fadeIn 0.5s ease-in-out;
@@ -152,8 +96,75 @@
   display: block;
 }
 
-/* Animasi smooth */
+/* Card */
+.card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  animation: floatUp 0.6s ease-in-out;
+}
+
+.card h1 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #16213e;
+}
+
+.card p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+/* Profile */
+.profile-img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 20px 0;
+  border: 4px solid #e94560;
+  transition: transform 0.3s ease;
+}
+
+.profile-img:hover {
+  transform: scale(1.1);
+}
+
+/* Animations */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
+  from { opacity: 0; transform: translateY(15px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes floatUp {
+  from { opacity: 0; transform: translateY(25px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  .wrapper {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .sidebar nav ul {
+    display: flex;
+  }
+
+  .sidebar nav ul li {
+    margin: 0 10px;
+  }
+
+  .main-content {
+    padding: 20px;
+  }
 }
