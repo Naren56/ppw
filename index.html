@@ -1,77 +1,36 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PPW</title>
-  <!-- Hubungkan ke CSS -->
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="app">
+  <div class="wrapper">
     <!-- Sidebar -->
-    <aside id="sidebar" class="sidebar" aria-label="Sisi navigasi">
-      <h1 class="logo">Foto</h1>
-
-      <div class="section-title">TUGAS</div>
-      <ul class="nav">
-        <li><a href="#profile" class="active">Profile</a></li>
-        <li><a href="#pengantar">Pengantar Web Mining</a></li>
-      </ul>
-
-      <footer>© 2025 • PPW</footer>
+    <aside class="sidebar">
+      <h2>PPW</h2>
+      <nav>
+        <ul>
+          <li><a href="#profile" class="active">Profile</a></li>
+          <li><a href="#tugas">Pengantar Web Mining</a></li>
+        </ul>
+      </nav>
+      <footer>
+        <p>© 2025 • PPW</p>
+      </footer>
     </aside>
 
-    <div id="overlay" class="overlay" onclick="toggleSidebar(false)"></div>
-
-    <!-- Main -->
-    <main class="main">
-      <div class="topbar">
-        <button class="menu-btn" onclick="toggleSidebar(true)" aria-label="Buka menu">
-          <!-- hamburger -->
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-        </button>
-      </div>
-
-      <!-- Profile Section -->
-      <section id="profile" class="card" aria-labelledby="h-profile">
-        <h2 id="h-profile" class="title">Profile</h2>
-        <div class="kartu">Narendra Wardianto • 220411100078 • 220411100078@student.trunojoyo.ac.id</div>
-        <p class="muted">Halo, nama saya <strong>Narendra Wardianto</strong>. Saya berasal dari Surabaya dan saat ini sedang menempuh perkuliahan di <em>Universitas Trunojoyo Madura</em>, Fakultas Teknik, Program Studi Teknik Informatika.</p>
-        <p>
-          Saya memiliki minat di bidang teknologi informasi, khususnya pada pengembangan web dan analisis data. 
-          Saat ini saya sedang belajar lebih dalam mengenai Web Mining dan pemanfaatannya untuk berbagai kebutuhan, mulai dari analisis sentimen hingga pengolahan data skala besar.
-        </p>
+    <!-- Main Content -->
+    <main class="main-content">
+      <section id="profile">
+        <h1>Foto</h1>
+        <img src="foto.jpg" alt="Foto Profil" class="profile-img">
+        <h2>220411100078</h2>
+        <p><b>220411100078@student.trunojoyo.ac.id</b></p>
       </section>
-
-      <div class="spacer"></div>
-
-      <!-- Pengantar Web Mining -->
-      <section id="pengantar" class="card" aria-labelledby="h-pengantar">
-        <h2 id="h-pengantar" class="title">Pengantar Web Mining</h2>
-        <ul>
-          <li>Definisi Web Mining & ruang lingkup: Content, Usage, dan Structure Mining.</li>
-          <li>Tantangan: skala data, dinamika web, dan heterogenitas format.</li>
-          <li>Alur umum: Pengumpulan data → Preprocessing → Representasi → Pemodelan → Evaluasi.</li>
-          <li>Contoh teknik: Naive Bayes, SVM, K-Means, PageRank, analisis clickstream.</li>
-          <li>Contoh aplikasi: rekomendasi produk, analisis sentimen, personalisasi pencarian.</li>
-        </ul>
-      </section>
-
-      <footer>
-        Dibuat untuk tugas PPW.
-      </footer>
     </main>
   </div>
-
-  <script>
-    const sidebar = document.getElementById('sidebar');
-    const overlay = document.getElementById('overlay');
-    function toggleSidebar(open) {
-      if (open === true) { sidebar.classList.add('open'); overlay.classList.add('show'); }
-      else { sidebar.classList.remove('open'); overlay.classList.remove('show'); }
-    }
-    document.querySelectorAll('.sidebar a').forEach(a => a.addEventListener('click', () => toggleSidebar(false)));
-  </script>
 </body>
 </html>
