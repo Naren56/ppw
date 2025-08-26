@@ -5,20 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PPW</title>
   <link rel="stylesheet" href="assets/style.css">
+  <!-- Tambah icon dari lucide atau fontawesome -->
+  <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <div class="wrapper">
     <!-- Sidebar -->
     <aside class="sidebar">
-      <h2>PPW</h2>
+      <h2>🌐 PPW</h2>
       <nav>
         <ul>
-          <li><a href="#" class="active" onclick="showSection('profile', this)">Profile</a></li>
-          <li><a href="#" onclick="showSection('pengantar', this)">Pengantar Web Mining</a></li>
+          <li><a href="#" class="active" onclick="showSection('profile', this)">
+            <i class="fas fa-user"></i> Profile</a></li>
+          <li><a href="#" onclick="showSection('pengantar', this)">
+            <i class="fas fa-book-open"></i> Pengantar Web Mining</a></li>
         </ul>
       </nav>
       <footer>
-        <p>© 2025 • PPW</p>
+        <p>© 2025 • <b>PPW</b></p>
       </footer>
     </aside>
 
@@ -26,24 +30,28 @@
     <main class="main-content">
       <!-- Profile Section -->
       <section id="profile" class="content-section active">
-        <h1>Profile</h1>
-        <img src="assets/img/foto-naren.jpg" alt="Foto Profil" class="profile-img">
-        <h2>220411100078</h2>
-        <p><b>220411100078@student.trunojoyo.ac.id</b></p>
+        <div class="card">
+          <h1>👤 Profile</h1>
+          <img src="assets/img/foto-naren.jpg" alt="Foto Profil" class="profile-img">
+          <h2>220411100078</h2>
+          <p><b>220411100078@student.trunojoyo.ac.id</b></p>
+        </div>
       </section>
 
       <!-- Pengantar Section -->
       <section id="pengantar" class="content-section">
-        <h1>Pengantar Web Mining</h1>
-        <p>
-          Web Mining adalah proses penemuan pola dari data yang besar dan kompleks
-          yang terdapat di web. Dalam mata kuliah ini akan dipelajari dasar-dasar
-          crawling, preprocessing, text mining, hingga penerapan metode analisis.
-        </p>
-        <p>
-          Tujuannya agar mahasiswa memahami cara mengolah informasi dari web untuk
-          keperluan riset maupun aplikasi nyata.
-        </p>
+        <div class="card">
+          <h1>📖 Pengantar Web Mining</h1>
+          <p>
+            Web Mining adalah proses penemuan pola dari data yang besar dan kompleks
+            yang terdapat di web. Dalam mata kuliah ini akan dipelajari dasar-dasar
+            crawling, preprocessing, text mining, hingga penerapan metode analisis.
+          </p>
+          <p>
+            Tujuannya agar mahasiswa memahami cara mengolah informasi dari web untuk
+            keperluan riset maupun aplikasi nyata.
+          </p>
+        </div>
       </section>
     </main>
   </div>
