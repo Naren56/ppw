@@ -13,8 +13,8 @@
       <h2>PPW</h2>
       <nav>
         <ul>
-          <li><a href="#profile" class="active">Profile</a></li>
-          <li><a href="#tugas">Pengantar Web Mining</a></li>
+          <li><a href="#" class="active" onclick="showSection('profile', this)">Profile</a></li>
+          <li><a href="#" onclick="showSection('pengantar', this)">Pengantar Web Mining</a></li>
         </ul>
       </nav>
       <footer>
@@ -24,13 +24,42 @@
 
     <!-- Main Content -->
     <main class="main-content">
-      <section id="profile">
-        <h1>Foto</h1>
+      <!-- Profile Section -->
+      <section id="profile" class="content-section active">
+        <h1>Profile</h1>
         <img src="foto.jpg" alt="Foto Profil" class="profile-img">
         <h2>220411100078</h2>
         <p><b>220411100078@student.trunojoyo.ac.id</b></p>
       </section>
+
+      <!-- Pengantar Section -->
+      <section id="pengantar" class="content-section">
+        <h1>Pengantar Web Mining</h1>
+        <p>
+          Web Mining adalah proses penemuan pola dari data yang besar dan kompleks
+          yang terdapat di web. Dalam mata kuliah ini akan dipelajari dasar-dasar
+          crawling, preprocessing, text mining, hingga penerapan metode analisis.
+        </p>
+        <p>
+          Tujuannya agar mahasiswa memahami cara mengolah informasi dari web untuk
+          keperluan riset maupun aplikasi nyata.
+        </p>
+      </section>
     </main>
   </div>
+
+  <script>
+    function showSection(id, el) {
+      // sembunyikan semua section
+      document.querySelectorAll(".content-section").forEach(sec => sec.classList.remove("active"));
+      // tampilkan section sesuai id
+      document.getElementById(id).classList.add("active");
+
+      // hapus class active di semua menu
+      document.querySelectorAll(".sidebar nav a").forEach(link => link.classList.remove("active"));
+      // tambahkan class active ke menu yang diklik
+      el.classList.add("active");
+    }
+  </script>
 </body>
 </html>
