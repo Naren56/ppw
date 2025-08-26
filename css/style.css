@@ -1,0 +1,45 @@
+:root {
+  --bg: #ffffff;
+  --ink: #1a1a1a;
+  --muted: #6b7280;
+  --line: #e5e7eb;
+  --accent: #2563eb;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; }
+body {
+  background: var(--bg); color: var(--ink);
+  font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+}
+a { color: inherit; text-decoration: none; }
+.app { display: grid; grid-template-columns: 280px 1fr; min-height: 100dvh; }
+
+/* Sidebar */
+.sidebar {
+  border-right: 1px solid var(--line);
+  padding: 40px 28px; position: sticky; top: 0; height: 100dvh; overflow:auto;
+  background: #fffefc;
+}
+.logo { font-size: 44px; font-weight: 700; margin: 0 0 28px; }
+.section-title { font-weight: 700; color: var(--muted); font-size: 14px; margin: 24px 0 8px; }
+.nav { list-style: none; }
+.nav a { display: block; padding: 10px 8px; border-radius: 10px; }
+.nav a.active, .nav a:hover { background: #f4f6ff; color: var(--accent); }
+
+/* Main */
+.main { padding: 40px 48px; }
+.title { font-size: 36px; font-weight: 700; margin-bottom: 20px; }
+.card { border:1px solid var(--line); border-radius:18px; padding:28px; background:#fff; margin-bottom:20px; }
+.kartu { font-size: 20px; font-weight: 600; margin-bottom: 12px; }
+.muted { color: var(--muted); }
+
+/* Responsive */
+@media (max-width: 900px) {
+  .app { grid-template-columns: 1fr; }
+  .sidebar { position: fixed; width: 78%; max-width: 320px; transform: translateX(-100%); transition: transform .25s ease; z-index: 20; }
+  .sidebar.open { transform: translateX(0); }
+  .overlay { position: fixed; inset: 0; background: rgba(0,0,0,.35); display:none; z-index:10; }
+  .overlay.show { display:block; }
+  .main { padding: 24px; }
+  .title { font-size: 28px; }
+}
