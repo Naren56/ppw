@@ -3,7 +3,7 @@ Web Mining merupakan salah satu bidang kajian dalam ilmu komputer dan data scien
 Dalam konteks sistem informasi, web mining tidak hanya bersifat teoretis, melainkan juga aplikatif. Menurut Turban et al. (2011), web mining berperan penting dalam decision support systems dan business intelligence, misalnya untuk memahami tren pasar, perilaku konsumen, hingga pembuatan sistem rekomendasi. 
 
 # Web Crawling
-Web Crawling adalah tahap awal dalam proses web mining yang bertujuan untuk mengumpulkan data dari halaman web secara otomatis menggunakan agen perangkat lunak yang disebut crawler atau spider. Mesin pencari seperti Google menggunakan web crawler untuk mengindeks konten web sehingga dapat diakses pengguna.
+Web Crawling adalah tahap awal dalam proses web mining yang bertujuan untuk mengkoleksi data dari web  menggunakan perangkat lunak yang disebut crawler atau spider. Mesin pencari seperti Google menggunakan web crawler untuk mengindeks konten web sehingga dapat diakses pengguna.
 Secara sistematis, web crawling melibatkan pengambilan dokumen melalui traversal hyperlink dari satu halaman ke halaman lainnya. Menurut Bizer et al. (2025), hasil crawling ini dapat berupa HTML, teks bebas, tabel, maupun metadata. Tantangan utama dalam crawling adalah skalabilitas (karena ukuran web yang sangat besar), efisiensi (penggunaan bandwidth dan penyimpanan), serta relevansi (menentukan halaman mana yang perlu diprioritaskan).
 
 # Web Data Preprocessing
